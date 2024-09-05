@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <%-include('header');-%><br/>
+    <%=mydata.length%>Records Found
+    <table border="1">
+        <tr>
+                <th>No</th>
+                <th>Name </th>
+                <th>Email </th>
+                <th>Password </th>
+                <th>Action</th>
+        </tr>
+        <%for(var i=0; i<mydata.length; i++){%>
+        <tr>
+            <th><%=i+1%></th>
+            <th><%=mydata[i].user_name%> </th>
+            <th><%=mydata[i].user_email%> </th>
+            <th><%=mydata[i].user_password%> </th>
+            <th>
+                <a href="/show/<%=mydata[i]._id%>">Show</a> |
+                <a href="/signup-edit/<%=mydata[i]._id%>">Edit</a> |
+                <a href="/delete/<%=mydata[i]._id%>" onclick="return  confirm('Sure you want to Delete?')">Delete</a>
+            </th>
+    </tr>
+    <%}%>
+    </table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Signup Edit Form</h1>
+    <form method="post" action="/update/<%=mydata._id%>">
+        <table>
+            <tr>
+                <th>Name </th>
+                <th><input type="text" name="user_name" value="<%=mydata.user_name%>"></th>
+            </tr>
+            <tr>
+                <th>Email </th>
+                <th><input type="email" name="user_email" value="<%=mydata.user_email%>"></th>
+            </tr>
+            <tr>
+                <th>Password </th>
+                <th><input type="password" name="user_password" value="<%=mydata.user_password%>"></th>
+            </tr>
+            <tr>
+                <th><input type="Submit"></th>
+                <th><input type="reset"></th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
