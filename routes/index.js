@@ -158,13 +158,13 @@ router.post('/forgot-password', function (req, res, next) {
           port: 587,
           secure: false, // true for 465, false for other ports
           auth: {
-            user: "aayushimodi0703@gmail.com",
-            pass: "giga irsz euew vhhn",
+            user: "aayushimodi@gmail.com",
+            pass: "giga njbmnbvv euew vhhn",
           }
         });
         let mailOptions = {
-          from: 'aayushimodi0703@gmail.com', // sender address
-          to: 'aayushimodi0703@gmail.com', // list of receivers
+          from: 'aayushimodi@gmail.com', // sender address
+          to: 'aayushimodi@gmail.com', // list of receivers
           subject: "Forgot Password", // Subject line
           text: "Hello your password is " + db_password, // plain text body
           html: "Hello your password is " + db_password // html body
